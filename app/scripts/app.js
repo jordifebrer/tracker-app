@@ -49,6 +49,16 @@ angular.module('TrackerApp', ['ionic', 'config', 'TrackerApp.controllers', 'Trac
       }
     })
 
+    .state('tab.friends', {
+      url: '/friends',
+      views: {
+        'tab-friends': {
+          templateUrl: 'templates/tab-friends.html',
+          controller: 'FriendsCtrl'
+        }
+      }
+    })
+
     .state('tab.add', {
       url: '/add',
       views: {
@@ -59,22 +69,32 @@ angular.module('TrackerApp', ['ionic', 'config', 'TrackerApp.controllers', 'Trac
       }
     })
 
-    .state('tab.archive', {
-      url: '/archive',
+    .state('tab.stats', {
+      url: '/stats',
       views: {
-        'tab-archive': {
-          templateUrl: 'templates/tab-archive.html',
-          controller: 'ArchiveCtrl'
+        'tab-stats': {
+          templateUrl: 'templates/tab-stats.html',
+          controller: 'StatsCtrl'
         }
       }
     })
 
-    .state('tab.account', {
-      url: '/account',
+    .state('tab.profile', {
+      url: '/profile',
       views: {
-        'tab-account': {
-          templateUrl: 'templates/tab-account.html',
-          controller: 'AccountCtrl'
+        'tab-profile': {
+          templateUrl: 'templates/tab-profile.html',
+          controller: 'ProfileCtrl'
+        }
+      }
+    })
+
+    .state('tab.config', {
+      url: '/config',
+      views: {
+        'tab-config': {
+          templateUrl: 'templates/tab-config.html',
+          controller: 'ConfigCtrl'
         }
       }
     });

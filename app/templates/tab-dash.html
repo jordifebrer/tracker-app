@@ -1,5 +1,10 @@
 <ion-view title="Dashboard">
-  <ion-content class="has-header padding">
-    <h1>Dash</h1>
+  <ion-content class="has-header">
+    <ion-list>
+      <ion-item class="item-icon-right" ng-repeat="activity in activities" type="item-text-wrap" href="#">
+        {{activity.name}}
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>

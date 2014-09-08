@@ -1,6 +1,6 @@
-<!-- 
-  Create tabs with an icon and label, using the tabs-positive style. 
-  Each tab's child <ion-nav-view> directive will have its own 
+<!--
+  Create tabs with an icon and label, using the tabs-positive style.
+  Each tab's child <ion-nav-view> directive will have its own
   navigation history that also transitions its views in and out.
 -->
 <ion-tabs class="tabs-icon-top">
@@ -12,21 +12,32 @@
   </ion-tab>
 
 
-  <!-- Add activity Tab -->
+  <!-- Friends Tab -->
+  <ion-tab title="Friends" icon="icon ion-heart" href="#/tab/friends">
+    <ion-nav-view name="tab-friends"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Add Tab -->
   <ion-tab title="Add" icon="icon ion-plus" href="#/tab/add">
     <ion-nav-view name="tab-add"></ion-nav-view>
   </ion-tab>
 
 
-  <!-- Archive activities Tab -->
-  <ion-tab title="Archive" icon="icon ion-clipboard" href="#/tab/archive">
-    <ion-nav-view name="tab-archive"></ion-nav-view>
+  <!-- Stats Tab -->
+  <ion-tab title="Stats" icon="icon ion-connection-bars" href="#/tab/stats">
+    <ion-nav-view name="tab-stats"></ion-nav-view>
   </ion-tab>
 
 
-  <!-- Account Tab -->
-  <ion-tab title="Account" icon="icon ion-gear-b" href="#/tab/account">
-    <ion-nav-view name="tab-account"></ion-nav-view>
+  <!-- Profile Tab -->
+  <ion-tab title="Profile" icon="icon ion-person" href="#/tab/profile" ng-if="!config">
+    <ion-nav-view name="tab-profile"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Config Tab -->
+  <ion-tab title="Config" icon="icon ion-gear-b" href="#/tab/config" ng-if="config">
+    <ion-nav-view name="tab-config" ng-hide="true"></ion-nav-view>
   </ion-tab>
 
 
