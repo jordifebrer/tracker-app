@@ -5,7 +5,8 @@ angular.module('TrackerApp.controllers', [])
   $scope.activities = Activities.all();
 })
 
-.controller('FriendsCtrl', function($scope) {
+.controller('FriendsCtrl', function($scope, Socials) {
+  $scope.socials = Socials.all();
 })
 
 .controller('AddCtrl', function($scope) {

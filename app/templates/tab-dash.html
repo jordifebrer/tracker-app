@@ -1,10 +1,13 @@
-<ion-view title="Dashboard">
+<ion-view title="TrackerApp">
   <ion-content class="has-header">
     <ion-list>
-      <ion-item class="item-icon-right" ng-repeat="activity in activities" type="item-text-wrap" href="#">
-        {{activity.name}}
+      <a class="item item-avatar item-icon-right" href="#" ng-repeat="activity in activities">
+        <img src="#">
+        <h2>{{activity.username}}</h2>
+        <p>{{activity.title}}</p>
         <i class="icon ion-chevron-right icon-accessory"></i>
-      </ion-item>
+      </a>
+      
     </ion-list>
   </ion-content>
 </ion-view>
