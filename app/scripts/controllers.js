@@ -13,7 +13,8 @@ angular.module('TrackerApp.controllers', [])
   $scope.socials = Socials.all();
 })
 
-.controller('AddCtrl', function($scope) {
+.controller('AddCtrl', function($scope, ActivityTypes) {
+  $scope.activityTypes = ActivityTypes.all();
 })
 
 .controller('StatsCtrl', function($scope) {

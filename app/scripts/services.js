@@ -57,4 +57,26 @@ angular.module('TrackerApp.services', [])
       return socials;
     }
   };
+})
+
+/**
+ * A simple example service that returns some fake activity types.
+ */
+.factory('ActivityTypes', function() {
+  // Might use a resource here that returns a JSON array
+
+  // Some fake testing data
+  var activityTypes = [
+    { id: 0, label: 'type1'},
+    { id: 1, label: 'type2'},
+    { id: 2, label: 'type3'},
+    { id: 3, label: 'type4'},
+    { id: 4, label: 'type5'},
+  ];
+
+  return {
+    all: function() {
+      return activityTypes;
+    }
+  };
 });
