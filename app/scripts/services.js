@@ -24,6 +24,10 @@ angular.module('TrackerApp.services', [])
   return {
     all: function() {
       return activities;
+    },
+    get: function(activityId) {
+      // Simple index lookup
+      return activities[activityId];
     }
   };
 })

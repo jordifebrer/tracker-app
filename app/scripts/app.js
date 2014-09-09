@@ -49,6 +49,16 @@ angular.module('TrackerApp', ['ionic', 'config', 'TrackerApp.controllers', 'Trac
       }
     })
 
+    .state('tab.dash-detail', {
+      url: '/dash/:activityId',
+      views: {
+        'tab-dash': {
+          templateUrl: 'templates/activity-detail.html',
+          controller: 'DashDetailCtrl'
+        }
+      }
+    })
+
     .state('tab.friends', {
       url: '/friends',
       views: {

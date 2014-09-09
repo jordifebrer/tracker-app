@@ -5,6 +5,10 @@ angular.module('TrackerApp.controllers', [])
   $scope.activities = Activities.all();
 })
 
+.controller('DashDetailCtrl', function($scope, $stateParams, Activities) {
+  $scope.activity = Activities.get($stateParams.activityId);
+})
+
 .controller('FriendsCtrl', function($scope, Socials) {
   $scope.socials = Socials.all();
 })
