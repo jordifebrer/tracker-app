@@ -27,8 +27,15 @@ angular.module('TrackerApp.controllers', [])
 })
 
 .controller('MainCtrl', function($scope) {
-    $scope.config= false;
-    $scope.changeConfig = function () {
-        $scope.config = !$scope.config;
-    }
+  $scope.config= false;
+  $scope.changeConfig = function () {
+    $scope.config = !$scope.config;
+  }
 })
+
+.controller('SignInCtrl', function($scope, $state) {
+  $scope.signIn = function(user) {
+    // TO DO - Check user
+    $state.go('tab.dash');
+  };
+});
