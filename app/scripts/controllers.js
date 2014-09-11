@@ -17,7 +17,9 @@ angular.module('TrackerApp.controllers', [])
   $scope.activityTypes = ActivityTypes.all();
 })
 
-.controller('StatsCtrl', function($scope) {
+.controller('StatsCtrl', function($scope, Activities, ActivityTypes) {
+  $scope.activities = Activities.all();
+  $scope.activityTypes = ActivityTypes.all();
 })
 
 .controller('ProfileCtrl', function($scope) {
